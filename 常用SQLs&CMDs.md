@@ -1,4 +1,13 @@
- ## 查建ddl语句
+## 查看用户信息
+```
+show user
+用户信息字典dab_users
+```
+## DB级默认配置
+```
+SELECT * FROM Database_Properties
+```
+## 查建ddl语句
 ```
 select dbms_metadata.get_ddl('TABLE','xxx') from dual; 
 ```
@@ -57,7 +66,7 @@ FROM
        (SELECT  tablespace_name,SUM(bytes)/1024/1024 free
                 FROM dba_free_space GROUP BY tablespace_name )f
 WHERE t.tablespace_name = f.tablespace_name
-AND t.tablespace_name = 'CFS_CORP_DATA'      
+AND t.tablespace_name = 'xxx'      
 ```
 
 ## 其它
@@ -97,6 +106,7 @@ NLSRTL Version 11.2.0.4.0 - Production*/
 SELECT * FROM dba_users
 where username = upper('cfssit')
 ;
+-- contents为表空间类型
 SELECT * FROM dba_tablespaces 
 where tablespace_name = 'xxx'
 ;
@@ -106,23 +116,7 @@ where tablespace_name = 'xxx'
 SELECT * FROM dba_temp_files
 where tablespace_name = 'TEMP2'
 ;
-SELECT * FROM user_tables;
---
-; 
-select * from user_tab_comments 
-where table_name = 'CORP_CREDIT_BASE_CARRY'
-;
-SELECT * FROM user_tab_columns
-where table_name = 'CORP_CREDIT_BASE_CARRY'
-;
-SELECT * FROM user_col_comments 
-where table_name = 'CORP_CREDIT_BASE_CARRY'
-;
-select t.*,c.comments 
-from user_tab_columns t
-left join user_col_comments c on t.TABLE_NAME = c.table_name and t.COLUMN_NAME = c.column_name
-where t.table_name = 'XXX'
-order by t.column_id
+
 
 
 ;
