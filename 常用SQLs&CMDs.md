@@ -68,6 +68,8 @@ FROM
 WHERE t.tablespace_name = f.tablespace_name
 AND t.tablespace_name = 'xxx'      
 ```
+## 锁
+https://zhidao.baidu.com/question/551264324.html
 
 ## 其它
 ```
