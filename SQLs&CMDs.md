@@ -73,6 +73,9 @@ https://zhidao.baidu.com/question/551264324.html
 
 ## 其它
 ```
+--log_mode
+--current_scn
+--flashback+on
 SELECT * FROM v$DATABASE 
 ;
 SELECT * FROM v$instance
