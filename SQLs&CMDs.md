@@ -10,6 +10,8 @@ SELECT * FROM Database_Properties
 ## 查建ddl语句
 ```
 select dbms_metadata.get_ddl('TABLE','xxx') from dual; 
+USER
+TABLESPACE
 ```
 ## 注释 
 user_tab_comments  
@@ -78,6 +80,7 @@ https://zhidao.baidu.com/question/551264324.html
 --flashback+on
 SELECT * FROM v$DATABASE 
 ;
+--instance_name,status
 SELECT * FROM v$instance
 ;
 SELECT * FROM v$session 
