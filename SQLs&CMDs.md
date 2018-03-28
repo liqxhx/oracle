@@ -130,5 +130,11 @@ where tablespace_name = 'TEMP2'
 ;
 SELECT * FROM user_tables
 where table_name like '%ADMIN%' 
+;
+select * from dba_sys_privs t where t.grantee = 'XXX' -- 查系统权限
+;
+select * from dba_tab_privs t where t.grantee = 'XXX' -- 对象权限
+;
+select * from dba_role_privs t where t.grantee = 'XXX' -- 角色
 ```
 
