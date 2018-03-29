@@ -136,5 +136,9 @@ select * from dba_sys_privs t where t.grantee = 'XXX' -- 查系统权限
 select * from dba_tab_privs t where t.grantee = 'XXX' -- 对象权限
 ;
 select * from dba_role_privs t where t.grantee = 'XXX' -- 角色
+；
+select * from role_sys_privs t where t.role = 'XXX' -- 角色的系统权限
+；
+select * from role_tab_privs t where t.role = 'XXX' -- 角色的对象权限
 ```
 
