@@ -16,9 +16,17 @@ export ORACLE_HOME=/home/liqxhx/instantclient_12_2
 #export TNS_ADMIN=$ORACLE_HOME/admin
 #可选
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME
-#NLS_LANG=SIMPLIFIED CHINESE_CHINA.ZHS16GBK
+#NLS_LANG="SIMPLIFIED CHINESE_CHINA.ZHS16GBK"
+#export LD_LIBRARY_PATH=$ORACLE_HOME:$ORACLE_HOME/lib:$LD_LIBRARY_PATH
 ```
 
 ## FAQ
-1. ubuntu16.04下报找不到libaio.so1
+### ubuntu16.04下报找不到libaio.so1
+```
 sudo apt install libaio1
+```
+### sqlplus: error while loading shared libraries: libsqlplus.so: cannot open shared object file: No such file or directory
+
+```
+export LD_LIBRARY_PATH=$ORACLE_HOME:$ORACLE_HOME/lib:$LD_LIBRARY_PATH
+```
